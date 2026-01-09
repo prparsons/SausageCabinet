@@ -1,0 +1,13 @@
+[Unit]
+Description=SausageCabinetService
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/home/pi/sausage/sausage.py
+WorkingDirectory=/home/pi/sausage/
+StandardOutput=append:/var/log/sausage.log
+StandardError=append:/var/log/sausage.log
+
+[Install]
+WantedBy=multi-user.target
